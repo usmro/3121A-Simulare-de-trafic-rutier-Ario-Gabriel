@@ -1,0 +1,6 @@
+#ifndef TRUCK_H_INCLUDED
+#define TRUCK_H_INCLUDED
+
+
+
+#endif // TRUCK_H_INCLUDED
