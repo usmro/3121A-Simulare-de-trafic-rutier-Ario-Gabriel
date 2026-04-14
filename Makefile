@@ -1,9 +1,7 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -Isrc
+CXXFLAGS = -std=c++17 -Wall
 
-# all .cpp files in src/
-SRCS = src/main.cpp \
-       src/Street.cpp \
+SRCS = src/Street.cpp \
        src/Intersection.cpp \
        src/RoadNetwork.cpp \
        src/Vehicle.cpp \
@@ -13,12 +11,11 @@ SRCS = src/main.cpp \
        src/Simulation.cpp \
        src/Logger.cpp
 
-TARGET = app
+all:
+	$(CXX) $(CXXFLAGS) -o app src/main.cpp $(SRCS)
 
-all: $(TARGET)
-
-$(TARGET): $(SRCS)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRCS)
+tests:
+	$(CXX) $(CXXFLAGS) -o tests src/tests.cpp $(SRCS)
 
 clean:
-	rm -f $(TARGET)
+	rm -f app tests
