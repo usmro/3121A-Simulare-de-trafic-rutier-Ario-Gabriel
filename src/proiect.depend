@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1776075359 source:f:\poo\proiect\intersection.cpp
+	"Intersection.h"
+	"Street.h"
+
+1743445502 source:f:\poo\proiect\main.cpp
+	<iostream>
+
+1776075381 source:f:\poo\proiect\roadnetwork.cpp
+	"RoadNetwork.h"
+
+1776075309 source:f:\poo\proiect\street.cpp
+	"Street.h"
+	"Intersection.h"
+	<algorithm>
+
+1776075160 f:\poo\proiect\street.h
+	<string>
+	<vector>
+
+1776075347 f:\poo\proiect\intersection.h
+	<string>
+	<vector>
+
+1776075369 f:\poo\proiect\roadnetwork.h
+	<vector>
+	<string>
+	<memory>
+	"Intersection.h"
+	"Street.h"
+
