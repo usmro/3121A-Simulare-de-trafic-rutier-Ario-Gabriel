@@ -1,6 +1,11 @@
-#ifndef TRUCK_H_INCLUDED
-#define TRUCK_H_INCLUDED
+#pragma once
+#include "Vehicle.h"
 
+class Truck : public Vehicle {
+public:
+    Truck(std::string id, Intersection* start, Intersection* dest);
 
-
-#endif // TRUCK_H_INCLUDED
+    int getMaxSpeed() override;
+    void behaviorAtIntersection(Intersection* i) override;
+    int edgeCost(Street* s) override;
+};
