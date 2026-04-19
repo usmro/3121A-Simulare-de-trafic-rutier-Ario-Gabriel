@@ -1,10 +1,11 @@
 #include "RoadNetwork.h"
+#include "Vehicle.h"
+#include <queue>
+#include <map>
+#include <climits>
+#include <algorithm>
 
 void RoadNetwork::build() {
-    // ── STEP 1: Create all 9 intersections ──
-    // We use make_shared so memory is managed automatically
-    // The string is the ID we'll use to find them later
-
     auto A = std::make_shared<Intersection>("A");
     auto B = std::make_shared<Intersection>("B");
     auto C = std::make_shared<Intersection>("C");
@@ -15,42 +16,22 @@ void RoadNetwork::build() {
     auto H = std::make_shared<Intersection>("H");
     auto I = std::make_shared<Intersection>("I");
 
-    // store them so we can find them later
     intersections = {A, B, C, D, E, F, G, H, I};
 
-    // ── STEP 2: Create all 12 streets ──
-    // Street(name, endA, endB, length, speedLimit)
-    // .get() converts shared_ptr to raw pointer
-
-    // top row:    A-B-C
     auto AB = std::make_shared<Street>("AB", A.get(), B.get(), 100, 50);
     auto BC = std::make_shared<Street>("BC", B.get(), C.get(), 100, 50);
-
-    // middle row: D-E-F
     auto DE = std::make_shared<Street>("DE", D.get(), E.get(), 100, 50);
     auto EF = std::make_shared<Street>("EF", E.get(), F.get(), 100, 50);
-
-    // bottom row: G-H-I
     auto GH = std::make_shared<Street>("GH", G.get(), H.get(), 100, 50);
     auto HI = std::make_shared<Street>("HI", H.get(), I.get(), 100, 50);
-
-    // left column:   A-D-G
     auto AD = std::make_shared<Street>("AD", A.get(), D.get(), 120, 60);
     auto DG = std::make_shared<Street>("DG", D.get(), G.get(), 120, 60);
-
-    // middle column: B-E-H
     auto BE = std::make_shared<Street>("BE", B.get(), E.get(), 120, 60);
     auto EH = std::make_shared<Street>("EH", E.get(), H.get(), 120, 60);
-
-    // right column:  C-F-I
     auto CF = std::make_shared<Street>("CF", C.get(), F.get(), 120, 60);
     auto FI = std::make_shared<Street>("FI", F.get(), I.get(), 120, 60);
 
     streets = {AB, BC, DE, EF, GH, HI, AD, DG, BE, EH, CF, FI};
-
-    // ── STEP 3: Connect streets to intersections ──
-    // Every intersection needs to know which streets touch it
-    // This is what makes the graph traversable
 
     A->addStreet(AB.get()); A->addStreet(AD.get());
     B->addStreet(AB.get()); B->addStreet(BC.get()); B->addStreet(BE.get());
@@ -76,4 +57,49 @@ std::vector<std::shared_ptr<Street>>& RoadNetwork::getStreets() {
 
 std::vector<std::shared_ptr<Intersection>>& RoadNetwork::getIntersections() {
     return intersections;
+}
+
+std::vector<Street*> RoadNetwork::findPath(Intersection* start,
+                                            Intersection* goal,
+                                            Vehicle* vehicle) {
+    using pii = std::pair<int, Intersection*>;
+    std::priority_queue<pii, std::vector<pii>, std::greater<pii>> pq;
+
+    std::map<Intersection*, int> dist;
+    std::map<Intersection*, Street*> previous;
+
+    pq.push({0, start});
+    dist[start] = 0;
+
+    while (!pq.empty()) {
+        auto [cost, current] = pq.top();
+        pq.pop();
+
+        if (current == goal) break;
+
+        for (Street* s : current->getStreets()) {
+            Intersection* next = s->getOtherEnd(current);
+            if (next == nullptr) continue;
+
+            int newCost = cost + vehicle->edgeCost(s);
+
+            if (dist.find(next) == dist.end() || newCost < dist[next]) {
+                dist[next] = newCost;
+                previous[next] = s;
+                pq.push({newCost, next});
+            }
+        }
+    }
+
+    std::vector<Street*> path;
+    Intersection* current = goal;
+
+    while (previous.find(current) != previous.end()) {
+        Street* s = previous[current];
+        path.push_back(s);
+        current = s->getOtherEnd(current);
+    }
+
+    std::reverse(path.begin(), path.end());
+    return path;
 }

@@ -1,40 +1,42 @@
 #include <iostream>
 #include "RoadNetwork.h"
+#include "Car.h"
+#include "Motorcycle.h"
+#include "Truck.h"
 
 int main() {
     RoadNetwork network;
     network.build();
 
-    // test 1: can we find an intersection?
-    Intersection* A = network.getIntersection("A");
-    std::cout << "Found intersection: " << A->getId() << "\n";
+    Intersection* start = network.getIntersection("A");
+    Intersection* goal  = network.getIntersection("I");
 
-    // test 2: does A have the right streets?
-    std::cout << "Streets from A: ";
-    for (Street* s : A->getStreets())
+    // Car — shortest distance
+    Car car("CAR-1", start, goal);
+    std::vector<Street*> carPath = network.findPath(start, goal, &car);
+    std::cout << "Car path (shortest distance): ";
+    for (Street* s : carPath)
         std::cout << s->getName() << " ";
     std::cout << "\n";
 
-    // test 3: does getOtherEnd work?
-    Street* firstStreet = A->getStreets()[0];
-    Intersection* other = firstStreet->getOtherEnd(A);
-    std::cout << "Other end of " << firstStreet->getName()
-              << " from A is: " << other->getId() << "\n";
+    // Motorcycle — fewest hops
+    Motorcycle moto("MOTO-1", start, goal);
+    std::vector<Street*> motoPath = network.findPath(start, goal, &moto);
+    std::cout << "Motorcycle path (fewest hops): ";
+    for (Street* s : motoPath)
+        std::cout << s->getName() << " ";
+    std::cout << "\n";
 
-    // test 4: can we manually walk A -> B -> E?
-    Intersection* current = network.getIntersection("A");
-    std::cout << "\nManual walk: " << current->getId();
+    // Truck — avoids congestion
+    network.getStreets()[0]->setCongestionLevel(8);
+    network.getStreets()[3]->setCongestionLevel(7);
 
-    // from A, take street AB
-    Street* AB = A->getStreets()[0]; // AB should be first
-    current = AB->getOtherEnd(current);
-    std::cout << " -> " << current->getId();
-
-    // from B, take street BE
-    // B has 3 streets: AB, BC, BE � BE is index 2
-    Street* BE = current->getStreets()[2];
-    current = BE->getOtherEnd(current);
-    std::cout << " -> " << current->getId() << "\n";
+    Truck truck("TRUCK-1", start, goal);
+    std::vector<Street*> truckPath = network.findPath(start, goal, &truck);
+    std::cout << "Truck path (avoids congestion): ";
+    for (Street* s : truckPath)
+        std::cout << s->getName() << " ";
+    std::cout << "\n";
 
     return 0;
 }

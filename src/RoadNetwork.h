@@ -1,21 +1,26 @@
 #pragma once
 #include <vector>
 #include <string>
-#include <memory>   // for shared_ptr
+#include <memory>
 
 #include "Intersection.h"
 #include "Street.h"
 
+class Vehicle;
+
 class RoadNetwork {
 private:
-    // shared_ptr manages memory for us — no manual delete needed
     std::vector<std::shared_ptr<Intersection>> intersections;
     std::vector<std::shared_ptr<Street>> streets;
 
 public:
-    void build();   // hardcodes the entire map, called once
+    void build();
 
-    // lookup helpers
+    // pathfinding â€” vehicle passed in so we can call its edgeCost()
+    std::vector<Street*> findPath(Intersection* start, 
+                                   Intersection* goal, 
+                                   Vehicle* vehicle);
+
     Intersection* getIntersection(std::string id);
     std::vector<std::shared_ptr<Street>>& getStreets();
     std::vector<std::shared_ptr<Intersection>>& getIntersections();
