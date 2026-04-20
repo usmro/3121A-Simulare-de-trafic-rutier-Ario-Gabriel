@@ -1,36 +1,27 @@
 [TICK 1] [EXIT]  Vehicle DELIVERY left intersection A
 [TICK 1] [ENTRY] Vehicle DELIVERY entered intersection B
-[TICK 1] [EXIT]  Vehicle V1 left intersection C
-[TICK 1] [ENTRY] Vehicle V1 entered intersection F
-[TICK 1] [EXIT]  Vehicle V2 left intersection D
-[TICK 1] [ENTRY] Vehicle V2 entered intersection E
-[TICK 1] [EXIT]  Vehicle V3 left intersection I
-[TICK 1] [ENTRY] Vehicle V3 entered intersection F
-[TICK 1] [EXIT]  Vehicle V4 left intersection E
-[TICK 1] [ENTRY] Vehicle V4 entered intersection D
-[TICK 1] [COLLISION] V2 and V4 collided on street DE
+[TICK 1] [EXIT]  Vehicle Car left intersection E
+[TICK 1] [ENTRY] Vehicle Car entered intersection D
+[TICK 1] [EXIT]  Vehicle Motorcycle left intersection A
+[TICK 1] [ENTRY] Vehicle Motorcycle entered intersection B
+[TICK 1] [EXIT]  Vehicle Truck left intersection D
+[TICK 1] [ENTRY] Vehicle Truck entered intersection E
+[TICK 1] [COLLISION] DELIVERY and Motorcycle collided on street AB
+[TICK 1] [COLLISION] Car and Truck collided on street DE
 [TICK 2] [EXIT]  Vehicle DELIVERY left intersection B
 [TICK 2] [ENTRY] Vehicle DELIVERY entered intersection C
-[TICK 2] [EXIT]  Vehicle V1 left intersection F
-[TICK 2] [ENTRY] Vehicle V1 entered intersection E
-[TICK 2] [EXIT]  Vehicle V3 left intersection F
-[TICK 2] [ENTRY] Vehicle V3 entered intersection E
-[TICK 2] [EXIT]  Vehicle V4 left intersection D
-[TICK 2] [ENTRY] Vehicle V4 entered intersection A
-[TICK 2] [COLLISION] V1 and V3 collided on street EF
+[TICK 2] [EXIT]  Vehicle Car left intersection D
+[TICK 2] [ENTRY] Vehicle Car entered intersection G
+[TICK 2] [EXIT]  Vehicle Motorcycle left intersection B
+[TICK 2] [ENTRY] Vehicle Motorcycle entered intersection C
+[TICK 2] [COLLISION] DELIVERY and Motorcycle collided on street BC
 [TICK 3] [EXIT]  Vehicle DELIVERY left intersection C
 [TICK 3] [ENTRY] Vehicle DELIVERY entered intersection F
-[TICK 3] [EXIT]  Vehicle V1 left intersection E
-[TICK 3] [ENTRY] Vehicle V1 entered intersection D
-[TICK 3] [EXIT]  Vehicle V3 left intersection E
-[TICK 3] [ENTRY] Vehicle V3 entered intersection D
-[TICK 3] [COLLISION] V2 and V1 collided on street DE
-[TICK 3] [COLLISION] V1 and V3 collided on street DE
+[TICK 3] [EXIT]  Vehicle Motorcycle left intersection C
+[TICK 3] [ENTRY] Vehicle Motorcycle entered intersection F
+[TICK 3] [COLLISION] DELIVERY and Motorcycle collided on street CF
 [TICK 4] [EXIT]  Vehicle DELIVERY left intersection F
 [TICK 4] [ENTRY] Vehicle DELIVERY entered intersection I
-[TICK 4] [EXIT]  Vehicle V1 left intersection D
-[TICK 4] [ENTRY] Vehicle V1 entered intersection G
-[TICK 4] [COLLISION] V2 and V3 collided on street DE
 [TICK 4] [DELIVERY] DELIVERY delivered package to I
 
 === SIMULATION COMPLETE ===

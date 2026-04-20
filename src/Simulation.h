@@ -7,6 +7,7 @@
 
 class Vehicle;
 class Car;
+class Street;
 
 class Simulation {
 private:
@@ -24,6 +25,7 @@ private:
     void checkDelivery();
     void toggleLights();
     Street* chooseNextStreet(Vehicle* v);
+    void printMap();
 
 public:
     Simulation(std::string logFilename);
