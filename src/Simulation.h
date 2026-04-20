@@ -1,6 +1,31 @@
-#ifndef SIMULATION_H_INCLUDED
-#define SIMULATION_H_INCLUDED
+#pragma once
+#include <vector>
+#include <memory>
+#include <string>
+#include "RoadNetwork.h"
+#include "Logger.h"
 
+class Vehicle;
+class Car;
 
+class Simulation {
+private:
+    RoadNetwork network;
+    std::vector<std::shared_ptr<Vehicle>> vehicles;
+    std::shared_ptr<Car> deliveryCar;
+    Logger logger;
+    int currentTick;
+    bool deliveryComplete;
 
-#endif // SIMULATION_H_INCLUDED
+    void spawnRandomTraffic();
+    void spawnDeliveryCar();
+    void tick();
+    void checkCollisions();
+    void checkDelivery();
+    void toggleLights();
+    Street* chooseNextStreet(Vehicle* v);
+
+public:
+    Simulation(std::string logFilename);
+    void run();
+};

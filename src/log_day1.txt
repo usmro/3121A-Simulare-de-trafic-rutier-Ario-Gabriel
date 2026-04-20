@@ -1,0 +1,37 @@
+[TICK 1] [EXIT]  Vehicle DELIVERY left intersection A
+[TICK 1] [ENTRY] Vehicle DELIVERY entered intersection B
+[TICK 1] [EXIT]  Vehicle V1 left intersection C
+[TICK 1] [ENTRY] Vehicle V1 entered intersection B
+[TICK 1] [EXIT]  Vehicle V2 left intersection G
+[TICK 1] [ENTRY] Vehicle V2 entered intersection D
+[TICK 1] [EXIT]  Vehicle V3 left intersection H
+[TICK 1] [ENTRY] Vehicle V3 entered intersection E
+[TICK 1] [EXIT]  Vehicle V4 left intersection C
+[TICK 1] [ENTRY] Vehicle V4 entered intersection B
+[TICK 1] [COLLISION] V1 and V4 collided on street BC
+[TICK 2] [EXIT]  Vehicle DELIVERY left intersection B
+[TICK 2] [ENTRY] Vehicle DELIVERY entered intersection C
+[TICK 2] [EXIT]  Vehicle V1 left intersection B
+[TICK 2] [ENTRY] Vehicle V1 entered intersection E
+[TICK 2] [EXIT]  Vehicle V2 left intersection D
+[TICK 2] [ENTRY] Vehicle V2 entered intersection A
+[TICK 2] [EXIT]  Vehicle V3 left intersection E
+[TICK 2] [ENTRY] Vehicle V3 entered intersection B
+[TICK 2] [EXIT]  Vehicle V4 left intersection B
+[TICK 2] [ENTRY] Vehicle V4 entered intersection A
+[TICK 2] [COLLISION] V1 and V3 collided on street BE
+[TICK 3] [EXIT]  Vehicle DELIVERY left intersection C
+[TICK 3] [ENTRY] Vehicle DELIVERY entered intersection F
+[TICK 3] [EXIT]  Vehicle V2 left intersection A
+[TICK 3] [ENTRY] Vehicle V2 entered intersection B
+[TICK 3] [COLLISION] V4 and V2 collided on street AB
+[TICK 3] [COLLISION] V1 and V3 collided on street BE
+[TICK 4] [EXIT]  Vehicle DELIVERY left intersection F
+[TICK 4] [ENTRY] Vehicle DELIVERY entered intersection I
+[TICK 4] [EXIT]  Vehicle V2 left intersection B
+[TICK 4] [ENTRY] Vehicle V2 entered intersection C
+[TICK 4] [COLLISION] V1 and V3 collided on street BE
+[TICK 4] [DELIVERY] DELIVERY delivered package to I
+
+=== SIMULATION COMPLETE ===
+Total ticks: 4
