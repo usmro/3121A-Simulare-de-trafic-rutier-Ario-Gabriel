@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <memory>
+#include <algorithm>
 
 #include "Intersection.h"
 #include "Street.h"
@@ -16,7 +17,6 @@ private:
 public:
     void build();
 
-    // pathfinding — vehicle passed in so we can call its edgeCost()
     std::vector<Street*> findPath(Intersection* start, 
                                    Intersection* goal, 
                                    Vehicle* vehicle);

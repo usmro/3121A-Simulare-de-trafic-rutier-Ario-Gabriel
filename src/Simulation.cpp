@@ -220,6 +220,9 @@ void Simulation::tick() {
     for (auto& v : vehicles) {
         if (v->hasArrived()) continue;
 
+        // only move if tick is divisible by vehicle's tick rate
+        if (currentTick % v->getTickRate() != 0) continue;
+
         Intersection* prevPosition = v->getCurrentPosition();
         v->behaviorAtIntersection(prevPosition);
 
@@ -242,7 +245,6 @@ void Simulation::tick() {
         }
     }
 
-    // collision detection
     for (auto& street : network.getStreets()) {
         auto& vs = street->getVehicles();
         if (vs.size() >= 2) {

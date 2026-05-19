@@ -1,21 +1,20 @@
-[TICK 1] [EXIT]  Vehicle DELIVERY left intersection A
-[TICK 1] [ENTRY] Vehicle DELIVERY entered intersection B
-[TICK 1] [EXIT]  Vehicle Car left intersection A
-[TICK 1] [ENTRY] Vehicle Car entered intersection B
-[TICK 1] [EXIT]  Vehicle Motorcycle left intersection D
+[TICK 1] [EXIT]  Vehicle Motorcycle left intersection B
 [TICK 1] [ENTRY] Vehicle Motorcycle entered intersection E
-[TICK 1] [EXIT]  Vehicle Truck left intersection G
-[TICK 1] [ENTRY] Vehicle Truck entered intersection H
-[TICK 1] [COLLISION] DELIVERY and Car collided on street AB
-[TICK 2] [EXIT]  Vehicle DELIVERY left intersection B
-[TICK 2] [ENTRY] Vehicle DELIVERY entered intersection C
-[TICK 2] [EXIT]  Vehicle Truck left intersection H
-[TICK 2] [ENTRY] Vehicle Truck entered intersection I
-[TICK 3] [EXIT]  Vehicle DELIVERY left intersection C
-[TICK 3] [ENTRY] Vehicle DELIVERY entered intersection F
-[TICK 4] [EXIT]  Vehicle DELIVERY left intersection F
-[TICK 4] [ENTRY] Vehicle DELIVERY entered intersection I
-[TICK 4] [DELIVERY] DELIVERY delivered package to I
+[TICK 2] [EXIT]  Vehicle DELIVERY left intersection A
+[TICK 2] [ENTRY] Vehicle DELIVERY entered intersection B
+[TICK 2] [EXIT]  Vehicle Car left intersection E
+[TICK 2] [ENTRY] Vehicle Car entered intersection F
+[TICK 3] [EXIT]  Vehicle Truck left intersection G
+[TICK 3] [ENTRY] Vehicle Truck entered intersection D
+[TICK 4] [EXIT]  Vehicle DELIVERY left intersection B
+[TICK 4] [ENTRY] Vehicle DELIVERY entered intersection C
+[TICK 6] [EXIT]  Vehicle DELIVERY left intersection C
+[TICK 6] [ENTRY] Vehicle DELIVERY entered intersection F
+[TICK 6] [EXIT]  Vehicle Truck left intersection D
+[TICK 6] [ENTRY] Vehicle Truck entered intersection E
+[TICK 8] [EXIT]  Vehicle DELIVERY left intersection F
+[TICK 8] [ENTRY] Vehicle DELIVERY entered intersection I
+[TICK 8] [DELIVERY] DELIVERY delivered package to I
 
 === SIMULATION COMPLETE ===
-Total ticks: 4
+Total ticks: 8

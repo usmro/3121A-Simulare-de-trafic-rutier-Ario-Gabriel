@@ -8,4 +8,5 @@ public:
     int getMaxSpeed() override;
     void behaviorAtIntersection(Intersection* i) override;
     int edgeCost(Street* s) override;
+    int getTickRate() override;
 };

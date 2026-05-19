@@ -2,6 +2,7 @@
 #include "Street.h"
 #include "Intersection.h"
 
+int Motorcycle::getTickRate() { return 1; }
 Motorcycle::Motorcycle(std::string id, Intersection* start, Intersection* dest)
     : Vehicle(id, start, dest) {}
 
