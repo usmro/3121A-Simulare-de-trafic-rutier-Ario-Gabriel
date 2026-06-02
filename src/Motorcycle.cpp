@@ -3,6 +3,7 @@
 #include "Intersection.h"
 
 int Motorcycle::getTickRate() { return 1; }
+
 Motorcycle::Motorcycle(std::string id, Intersection* start, Intersection* dest)
     : Vehicle(id, start, dest) {}
 
@@ -11,14 +12,15 @@ int Motorcycle::getMaxSpeed() {
 }
 
 int Motorcycle::edgeCost(Street* s) {
-    // every hop costs 1 — fewest intersections wins
-    // doesn't care about distance at all
+    // greedy fewest hops — every street costs 1
     return 1;
 }
 
 void Motorcycle::behaviorAtIntersection(Intersection* i) {
     if (i->isRed()) {
-        currentSpeed = currentSpeed / 2; // slows down but doesn't fully stop
+        // BUG FIX: was currentSpeed/2 which is 0 on first tick
+        // now correctly uses getMaxSpeed()/2 so it always slows, never freezes
+        currentSpeed = getMaxSpeed() / 2;
     } else {
         currentSpeed = getMaxSpeed();
     }

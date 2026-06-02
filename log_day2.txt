@@ -1,0 +1,65 @@
+[TICK 1] [EXIT]  Vehicle DELIVERY left intersection I
+[TICK 1] [ENTRY] Vehicle DELIVERY entered intersection H
+[TICK 1] [EXIT]  Vehicle Car left intersection C
+[TICK 1] [ENTRY] Vehicle Car entered intersection B
+[TICK 1] [EXIT]  Vehicle Motorcycle left intersection I
+[TICK 1] [ENTRY] Vehicle Motorcycle entered intersection F
+[TICK 1] [EXIT]  Vehicle Truck left intersection G
+[TICK 1] [ENTRY] Vehicle Truck entered intersection D
+[TICK 2] [EXIT]  Vehicle Car left intersection B
+[TICK 2] [ENTRY] Vehicle Car entered intersection A
+[TICK 2] [EXIT]  Vehicle Motorcycle left intersection F
+[TICK 2] [ENTRY] Vehicle Motorcycle entered intersection E
+[TICK 3] [EXIT]  Vehicle DELIVERY left intersection H
+[TICK 3] [ENTRY] Vehicle DELIVERY entered intersection G
+[TICK 3] [DELIVERY] DELIVERY delivered to G
+[TICK 5] [EXIT]  Vehicle DELIVERY left intersection G
+[TICK 5] [ENTRY] Vehicle DELIVERY entered intersection H
+[TICK 5] [EXIT]  Vehicle Motorcycle left intersection E
+[TICK 5] [ENTRY] Vehicle Motorcycle entered intersection D
+[TICK 6] [EXIT]  Vehicle DELIVERY left intersection H
+[TICK 6] [ENTRY] Vehicle DELIVERY entered intersection I
+[TICK 6] [EXIT]  Vehicle Car left intersection A
+[TICK 6] [ENTRY] Vehicle Car entered intersection D
+[TICK 6] [EXIT]  Vehicle Motorcycle left intersection D
+[TICK 6] [ENTRY] Vehicle Motorcycle entered intersection A
+[TICK 7] [EXIT]  Vehicle DELIVERY left intersection I
+[TICK 7] [ENTRY] Vehicle DELIVERY entered intersection F
+[TICK 7] [EXIT]  Vehicle Car left intersection D
+[TICK 7] [ENTRY] Vehicle Car entered intersection G
+[TICK 7] [EXIT]  Vehicle Motorcycle left intersection A
+[TICK 7] [ENTRY] Vehicle Motorcycle entered intersection B
+[TICK 7] [EXIT]  Vehicle Truck left intersection D
+[TICK 7] [ENTRY] Vehicle Truck entered intersection A
+[TICK 8] [EXIT]  Vehicle DELIVERY left intersection F
+[TICK 8] [ENTRY] Vehicle DELIVERY entered intersection C
+[TICK 8] [DELIVERY] DELIVERY delivered to C
+[TICK 10] [EXIT]  Vehicle DELIVERY left intersection C
+[TICK 10] [ENTRY] Vehicle DELIVERY entered intersection B
+[TICK 10] [EXIT]  Vehicle Car left intersection G
+[TICK 10] [ENTRY] Vehicle Car entered intersection H
+[TICK 10] [EXIT]  Vehicle Motorcycle left intersection B
+[TICK 10] [ENTRY] Vehicle Motorcycle entered intersection C
+[TICK 11] [EXIT]  Vehicle DELIVERY left intersection B
+[TICK 11] [ENTRY] Vehicle DELIVERY entered intersection A
+[TICK 11] [EXIT]  Vehicle Car left intersection H
+[TICK 11] [ENTRY] Vehicle Car entered intersection I
+[TICK 11] [EXIT]  Vehicle Motorcycle left intersection C
+[TICK 11] [ENTRY] Vehicle Motorcycle entered intersection F
+[TICK 11] [DELIVERY] DELIVERY delivered to A
+[TICK 12] [EXIT]  Vehicle DELIVERY left intersection A
+[TICK 12] [ENTRY] Vehicle DELIVERY entered intersection D
+[TICK 12] [EXIT]  Vehicle Car left intersection I
+[TICK 12] [ENTRY] Vehicle Car entered intersection H
+[TICK 12] [EXIT]  Vehicle Motorcycle left intersection F
+[TICK 12] [ENTRY] Vehicle Motorcycle entered intersection I
+[TICK 12] [EXIT]  Vehicle Truck left intersection A
+[TICK 12] [ENTRY] Vehicle Truck entered intersection B
+[TICK 13] [EXIT]  Vehicle DELIVERY left intersection D
+[TICK 13] [ENTRY] Vehicle DELIVERY entered intersection G
+[TICK 13] [EXIT]  Vehicle Motorcycle left intersection I
+[TICK 13] [ENTRY] Vehicle Motorcycle entered intersection F
+[TICK 13] [DELIVERY] DELIVERY delivered to G
+
+=== SIMULATION COMPLETE ===
+Total ticks: 13

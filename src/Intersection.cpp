@@ -1,10 +1,9 @@
-#include "Intersection.h"
+﻿#include "Intersection.h"
 #include "Street.h"
 
 Intersection::Intersection(std::string id) {
     this->id = id;
-    this->trafficLightRed = false; // starts green
-    this->lightTimer = 0;
+    this->trafficLightRed = false;
 }
 
 void Intersection::addStreet(Street* s) {

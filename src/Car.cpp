@@ -2,9 +2,12 @@
 #include "Street.h"
 #include "Intersection.h"
 
-int Car::getTickRate() { return 2; }
 Car::Car(std::string id, Intersection* start, Intersection* dest)
     : Vehicle(id, start, dest) {}
+
+int Car::getTickRate() {
+    return 1; // moves every tick
+}
 
 int Car::getMaxSpeed() {
     return 120;
@@ -17,7 +20,7 @@ int Car::edgeCost(Street* s) {
 
 void Car::behaviorAtIntersection(Intersection* i) {
     if (i->isRed()) {
-        currentSpeed = 0;       // full stop at red
+        currentSpeed = 0; // full stop at red
     } else {
         currentSpeed = getMaxSpeed();
     }

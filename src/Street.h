@@ -1,17 +1,9 @@
-// at the top of Street.h, instead of #include "Intersection.h"
-class Intersection;  // just declares it exists, no details needed yet
-#ifndef STREET_H_INCLUDED
-#define STREET_H_INCLUDED
-
-
-
-#endif // STREET_H_INCLUDED
 #pragma once
 #include <string>
 #include <vector>
 
-class Intersection;  // forward declaration, not #include
-class Vehicle;       // same for Vehicle, we'll use it later
+class Intersection; // forward declaration, not #include
+class Vehicle;      // same for Vehicle
 
 class Street {
 private:
@@ -20,18 +12,16 @@ private:
     int speedLimit;      // km/h
     int congestionLevel; // 1-10, randomized each simulation run
 
-    Intersection* endA;  // one end of the street
-    Intersection* endB;  // other end of the street
+    Intersection* endA; // one end of the street
+    Intersection* endB; // other end of the street
 
     std::vector<Vehicle*> vehiclesOnStreet; // who's currently on this street
 
 public:
-    // constructor
     Street(std::string name, Intersection* a, Intersection* b,
            int length, int speedLimit);
 
-    // the most important method — given you're coming FROM one end,
-    // return the OTHER end. This is how vehicles traverse the graph
+    // given you're coming FROM one end, return the OTHER end
     Intersection* getOtherEnd(Intersection* from);
 
     // vehicle tracking

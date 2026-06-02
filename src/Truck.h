@@ -9,4 +9,5 @@ public:
     void behaviorAtIntersection(Intersection* i) override;
     int edgeCost(Street* s) override;
     int getTickRate() override;
+    // BUG FIX: removed duplicate waitTicks — it's already in Vehicle base class
 };

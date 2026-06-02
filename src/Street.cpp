@@ -14,7 +14,7 @@ Street::Street(std::string name, Intersection* a, Intersection* b,
 
 Intersection* Street::getOtherEnd(Intersection* from) {
     // if you're coming from A, return B and vice versa
-    // this is how graph traversal works — you know where you came from
+    // this is how graph traversal works ï¿½ you know where you came from
     if (from == endA) return endB;
     if (from == endB) return endA;
     return nullptr; // should never happen

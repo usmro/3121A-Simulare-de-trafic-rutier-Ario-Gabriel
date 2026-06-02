@@ -8,22 +8,28 @@ Vehicle::Vehicle(std::string id, Intersection* start, Intersection* dest) {
     this->destination = dest;
     this->currentStreet = nullptr;
     this->currentSpeed = 0;
+    this->waitTicks = 0;
+    this->lastWaitedStreet = nullptr;
+    this->freezeTicks = 0;
 }
 
 void Vehicle::move(Street* nextStreet) {
     if (nextStreet == nullptr) return;
 
-    // move to the other end of the chosen street
     Intersection* next = nextStreet->getOtherEnd(currentPosition);
     if (next == nullptr) return;
 
     currentStreet = nextStreet;
     currentPosition = next;
-    currentSpeed = getMaxSpeed(); // travel at max speed between intersections
+    currentSpeed = getMaxSpeed();
 }
 
 bool Vehicle::hasArrived() {
     return currentPosition == destination;
+}
+
+void Vehicle::setDestination(Intersection* dest) {
+    destination = dest;
 }
 
 std::string Vehicle::getId() { return id; }

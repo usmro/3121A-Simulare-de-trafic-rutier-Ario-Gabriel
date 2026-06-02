@@ -2,9 +2,12 @@
 #include "Street.h"
 #include "Intersection.h"
 
-int Truck::getTickRate() { return 3; }
 Truck::Truck(std::string id, Intersection* start, Intersection* dest)
     : Vehicle(id, start, dest) {}
+
+int Truck::getTickRate() {
+    return 1; // moves every tick
+}
 
 int Truck::getMaxSpeed() {
     return 90;
@@ -16,6 +19,11 @@ int Truck::edgeCost(Street* s) {
 }
 
 void Truck::behaviorAtIntersection(Intersection* i) {
-    // always stops, slow and cautious
-    currentSpeed = 0;
+    // always stops at red — slow and cautious
+    // but moves normally on green unlike before
+    if (i->isRed()) {
+        currentSpeed = 0;
+    } else {
+        currentSpeed = getMaxSpeed();
+    }
 }

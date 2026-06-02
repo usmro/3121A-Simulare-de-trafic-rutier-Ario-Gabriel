@@ -1,0 +1,329 @@
+{
+  "ticks": [
+    {
+      "tick": 1,
+      "delivered": false,
+      "deliveredTo": "",
+      "packagesDelivered": 0,
+      "totalPackages": 4,
+      "vehicles": [
+        {"id":"DELIVERY","pos":"H","dest":"G","status":"moving","speed":120},
+        {"id":"Car","pos":"B","dest":"G","status":"moving","speed":120},
+        {"id":"Motorcycle","pos":"F","dest":"A","status":"moving","speed":160},
+        {"id":"Truck","pos":"D","dest":"C","status":"moving","speed":90}
+      ],
+      "lights": [
+        {"id":"A","isRed":false,"ticksRemaining":2},
+        {"id":"B","isRed":false,"ticksRemaining":0},
+        {"id":"C","isRed":false,"ticksRemaining":1},
+        {"id":"D","isRed":false,"ticksRemaining":1},
+        {"id":"E","isRed":true,"ticksRemaining":2},
+        {"id":"F","isRed":true,"ticksRemaining":1},
+        {"id":"G","isRed":false,"ticksRemaining":0},
+        {"id":"H","isRed":true,"ticksRemaining":0},
+        {"id":"I","isRed":false,"ticksRemaining":1}
+      ],
+      "collisions": []
+    },
+    {
+      "tick": 2,
+      "delivered": false,
+      "deliveredTo": "",
+      "packagesDelivered": 0,
+      "totalPackages": 4,
+      "vehicles": [
+        {"id":"DELIVERY","pos":"H","dest":"G","status":"moving","speed":0},
+        {"id":"Car","pos":"A","dest":"G","status":"moving","speed":120},
+        {"id":"Motorcycle","pos":"E","dest":"A","status":"moving","speed":160},
+        {"id":"Truck","pos":"D","dest":"C","status":"TRAFFIC","speed":90}
+      ],
+      "lights": [
+        {"id":"A","isRed":false,"ticksRemaining":1},
+        {"id":"B","isRed":true,"ticksRemaining":2},
+        {"id":"C","isRed":false,"ticksRemaining":0},
+        {"id":"D","isRed":false,"ticksRemaining":0},
+        {"id":"E","isRed":true,"ticksRemaining":1},
+        {"id":"F","isRed":true,"ticksRemaining":0},
+        {"id":"G","isRed":true,"ticksRemaining":1},
+        {"id":"H","isRed":false,"ticksRemaining":1},
+        {"id":"I","isRed":false,"ticksRemaining":0}
+      ],
+      "collisions": []
+    },
+    {
+      "tick": 3,
+      "delivered": true,
+      "deliveredTo": "G",
+      "packagesDelivered": 1,
+      "totalPackages": 4,
+      "vehicles": [
+        {"id":"DELIVERY","pos":"G","dest":"C","status":"moving","speed":120},
+        {"id":"Car","pos":"A","dest":"G","status":"TRAFFIC","speed":120},
+        {"id":"Motorcycle","pos":"E","dest":"A","status":"TRAFFIC","speed":80},
+        {"id":"Truck","pos":"D","dest":"C","status":"moving","speed":90}
+      ],
+      "lights": [
+        {"id":"A","isRed":false,"ticksRemaining":0},
+        {"id":"B","isRed":true,"ticksRemaining":1},
+        {"id":"C","isRed":true,"ticksRemaining":2},
+        {"id":"D","isRed":true,"ticksRemaining":2},
+        {"id":"E","isRed":true,"ticksRemaining":0},
+        {"id":"F","isRed":false,"ticksRemaining":0},
+        {"id":"G","isRed":true,"ticksRemaining":0},
+        {"id":"H","isRed":false,"ticksRemaining":0},
+        {"id":"I","isRed":true,"ticksRemaining":2}
+      ],
+      "collisions": []
+    },
+    {
+      "tick": 4,
+      "delivered": false,
+      "deliveredTo": "",
+      "packagesDelivered": 1,
+      "totalPackages": 4,
+      "vehicles": [
+        {"id":"DELIVERY","pos":"G","dest":"C","status":"moving","speed":0},
+        {"id":"Car","pos":"A","dest":"G","status":"moving","speed":120},
+        {"id":"Motorcycle","pos":"E","dest":"A","status":"moving","speed":80},
+        {"id":"Truck","pos":"D","dest":"C","status":"RED","speed":0}
+      ],
+      "lights": [
+        {"id":"A","isRed":true,"ticksRemaining":0},
+        {"id":"B","isRed":true,"ticksRemaining":0},
+        {"id":"C","isRed":true,"ticksRemaining":1},
+        {"id":"D","isRed":true,"ticksRemaining":1},
+        {"id":"E","isRed":false,"ticksRemaining":2},
+        {"id":"F","isRed":true,"ticksRemaining":2},
+        {"id":"G","isRed":false,"ticksRemaining":1},
+        {"id":"H","isRed":true,"ticksRemaining":0},
+        {"id":"I","isRed":true,"ticksRemaining":1}
+      ],
+      "collisions": []
+    },
+    {
+      "tick": 5,
+      "delivered": false,
+      "deliveredTo": "",
+      "packagesDelivered": 1,
+      "totalPackages": 4,
+      "vehicles": [
+        {"id":"DELIVERY","pos":"H","dest":"C","status":"moving","speed":120},
+        {"id":"Car","pos":"A","dest":"G","status":"moving","speed":0},
+        {"id":"Motorcycle","pos":"D","dest":"A","status":"moving","speed":160},
+        {"id":"Truck","pos":"D","dest":"C","status":"RED","speed":0}
+      ],
+      "lights": [
+        {"id":"A","isRed":false,"ticksRemaining":2},
+        {"id":"B","isRed":false,"ticksRemaining":0},
+        {"id":"C","isRed":true,"ticksRemaining":0},
+        {"id":"D","isRed":true,"ticksRemaining":0},
+        {"id":"E","isRed":false,"ticksRemaining":1},
+        {"id":"F","isRed":true,"ticksRemaining":1},
+        {"id":"G","isRed":false,"ticksRemaining":0},
+        {"id":"H","isRed":false,"ticksRemaining":2},
+        {"id":"I","isRed":true,"ticksRemaining":0}
+      ],
+      "collisions": []
+    },
+    {
+      "tick": 6,
+      "delivered": false,
+      "deliveredTo": "",
+      "packagesDelivered": 1,
+      "totalPackages": 4,
+      "vehicles": [
+        {"id":"DELIVERY","pos":"I","dest":"C","status":"moving","speed":120},
+        {"id":"Car","pos":"D","dest":"G","status":"moving","speed":120},
+        {"id":"Motorcycle","pos":"A","dest":"A","status":"done","speed":160},
+        {"id":"Truck","pos":"D","dest":"C","status":"moving","speed":0}
+      ],
+      "lights": [
+        {"id":"A","isRed":false,"ticksRemaining":1},
+        {"id":"B","isRed":true,"ticksRemaining":0},
+        {"id":"C","isRed":false,"ticksRemaining":0},
+        {"id":"D","isRed":false,"ticksRemaining":2},
+        {"id":"E","isRed":false,"ticksRemaining":0},
+        {"id":"F","isRed":true,"ticksRemaining":0},
+        {"id":"G","isRed":true,"ticksRemaining":2},
+        {"id":"H","isRed":false,"ticksRemaining":1},
+        {"id":"I","isRed":false,"ticksRemaining":1}
+      ],
+      "collisions": []
+    },
+    {
+      "tick": 7,
+      "delivered": false,
+      "deliveredTo": "",
+      "packagesDelivered": 1,
+      "totalPackages": 4,
+      "vehicles": [
+        {"id":"DELIVERY","pos":"F","dest":"C","status":"moving","speed":120},
+        {"id":"Car","pos":"G","dest":"G","status":"done","speed":120},
+        {"id":"Motorcycle","pos":"B","dest":"I","status":"moving","speed":160},
+        {"id":"Truck","pos":"A","dest":"C","status":"moving","speed":90}
+      ],
+      "lights": [
+        {"id":"A","isRed":false,"ticksRemaining":0},
+        {"id":"B","isRed":false,"ticksRemaining":0},
+        {"id":"C","isRed":true,"ticksRemaining":1},
+        {"id":"D","isRed":false,"ticksRemaining":1},
+        {"id":"E","isRed":true,"ticksRemaining":1},
+        {"id":"F","isRed":false,"ticksRemaining":2},
+        {"id":"G","isRed":true,"ticksRemaining":1},
+        {"id":"H","isRed":false,"ticksRemaining":0},
+        {"id":"I","isRed":false,"ticksRemaining":0}
+      ],
+      "collisions": []
+    },
+    {
+      "tick": 8,
+      "delivered": true,
+      "deliveredTo": "C",
+      "packagesDelivered": 2,
+      "totalPackages": 4,
+      "vehicles": [
+        {"id":"DELIVERY","pos":"C","dest":"A","status":"moving","speed":120},
+        {"id":"Car","pos":"G","dest":"I","status":"RED","speed":0},
+        {"id":"Motorcycle","pos":"B","dest":"I","status":"TRAFFIC","speed":160},
+        {"id":"Truck","pos":"A","dest":"C","status":"TRAFFIC","speed":90}
+      ],
+      "lights": [
+        {"id":"A","isRed":true,"ticksRemaining":2},
+        {"id":"B","isRed":true,"ticksRemaining":1},
+        {"id":"C","isRed":true,"ticksRemaining":0},
+        {"id":"D","isRed":false,"ticksRemaining":0},
+        {"id":"E","isRed":true,"ticksRemaining":0},
+        {"id":"F","isRed":false,"ticksRemaining":1},
+        {"id":"G","isRed":true,"ticksRemaining":0},
+        {"id":"H","isRed":true,"ticksRemaining":0},
+        {"id":"I","isRed":true,"ticksRemaining":1}
+      ],
+      "collisions": []
+    },
+    {
+      "tick": 9,
+      "delivered": false,
+      "deliveredTo": "",
+      "packagesDelivered": 2,
+      "totalPackages": 4,
+      "vehicles": [
+        {"id":"DELIVERY","pos":"C","dest":"A","status":"moving","speed":0},
+        {"id":"Car","pos":"G","dest":"I","status":"moving","speed":0},
+        {"id":"Motorcycle","pos":"B","dest":"I","status":"moving","speed":160},
+        {"id":"Truck","pos":"A","dest":"C","status":"moving","speed":90}
+      ],
+      "lights": [
+        {"id":"A","isRed":true,"ticksRemaining":1},
+        {"id":"B","isRed":true,"ticksRemaining":0},
+        {"id":"C","isRed":false,"ticksRemaining":0},
+        {"id":"D","isRed":true,"ticksRemaining":1},
+        {"id":"E","isRed":false,"ticksRemaining":1},
+        {"id":"F","isRed":false,"ticksRemaining":0},
+        {"id":"G","isRed":false,"ticksRemaining":1},
+        {"id":"H","isRed":false,"ticksRemaining":1},
+        {"id":"I","isRed":true,"ticksRemaining":0}
+      ],
+      "collisions": []
+    },
+    {
+      "tick": 10,
+      "delivered": false,
+      "deliveredTo": "",
+      "packagesDelivered": 2,
+      "totalPackages": 4,
+      "vehicles": [
+        {"id":"DELIVERY","pos":"B","dest":"A","status":"moving","speed":120},
+        {"id":"Car","pos":"H","dest":"I","status":"moving","speed":120},
+        {"id":"Motorcycle","pos":"C","dest":"I","status":"moving","speed":160},
+        {"id":"Truck","pos":"A","dest":"C","status":"RED","speed":0}
+      ],
+      "lights": [
+        {"id":"A","isRed":true,"ticksRemaining":0},
+        {"id":"B","isRed":false,"ticksRemaining":1},
+        {"id":"C","isRed":true,"ticksRemaining":0},
+        {"id":"D","isRed":true,"ticksRemaining":0},
+        {"id":"E","isRed":false,"ticksRemaining":0},
+        {"id":"F","isRed":true,"ticksRemaining":1},
+        {"id":"G","isRed":false,"ticksRemaining":0},
+        {"id":"H","isRed":false,"ticksRemaining":0},
+        {"id":"I","isRed":false,"ticksRemaining":1}
+      ],
+      "collisions": []
+    },
+    {
+      "tick": 11,
+      "delivered": true,
+      "deliveredTo": "A",
+      "packagesDelivered": 3,
+      "totalPackages": 4,
+      "vehicles": [
+        {"id":"DELIVERY","pos":"A","dest":"G","status":"moving","speed":120},
+        {"id":"Car","pos":"I","dest":"I","status":"done","speed":120},
+        {"id":"Motorcycle","pos":"F","dest":"I","status":"moving","speed":160},
+        {"id":"Truck","pos":"A","dest":"C","status":"moving","speed":0}
+      ],
+      "lights": [
+        {"id":"A","isRed":false,"ticksRemaining":0},
+        {"id":"B","isRed":false,"ticksRemaining":0},
+        {"id":"C","isRed":false,"ticksRemaining":1},
+        {"id":"D","isRed":false,"ticksRemaining":1},
+        {"id":"E","isRed":true,"ticksRemaining":1},
+        {"id":"F","isRed":true,"ticksRemaining":0},
+        {"id":"G","isRed":true,"ticksRemaining":1},
+        {"id":"H","isRed":true,"ticksRemaining":2},
+        {"id":"I","isRed":false,"ticksRemaining":0}
+      ],
+      "collisions": []
+    },
+    {
+      "tick": 12,
+      "delivered": false,
+      "deliveredTo": "",
+      "packagesDelivered": 3,
+      "totalPackages": 4,
+      "vehicles": [
+        {"id":"DELIVERY","pos":"D","dest":"G","status":"moving","speed":120},
+        {"id":"Car","pos":"H","dest":"A","status":"moving","speed":120},
+        {"id":"Motorcycle","pos":"I","dest":"I","status":"done","speed":160},
+        {"id":"Truck","pos":"B","dest":"C","status":"moving","speed":90}
+      ],
+      "lights": [
+        {"id":"A","isRed":true,"ticksRemaining":1},
+        {"id":"B","isRed":true,"ticksRemaining":2},
+        {"id":"C","isRed":false,"ticksRemaining":0},
+        {"id":"D","isRed":false,"ticksRemaining":0},
+        {"id":"E","isRed":true,"ticksRemaining":0},
+        {"id":"F","isRed":false,"ticksRemaining":0},
+        {"id":"G","isRed":true,"ticksRemaining":0},
+        {"id":"H","isRed":true,"ticksRemaining":1},
+        {"id":"I","isRed":true,"ticksRemaining":2}
+      ],
+      "collisions": []
+    },
+    {
+      "tick": 13,
+      "delivered": true,
+      "deliveredTo": "G",
+      "packagesDelivered": 4,
+      "totalPackages": 4,
+      "vehicles": [
+        {"id":"DELIVERY","pos":"G","dest":"G","status":"done","speed":120},
+        {"id":"Car","pos":"H","dest":"A","status":"RED","speed":0},
+        {"id":"Motorcycle","pos":"F","dest":"A","status":"moving","speed":160},
+        {"id":"Truck","pos":"B","dest":"C","status":"RED","speed":0}
+      ],
+      "lights": [
+        {"id":"A","isRed":true,"ticksRemaining":0},
+        {"id":"B","isRed":true,"ticksRemaining":1},
+        {"id":"C","isRed":true,"ticksRemaining":1},
+        {"id":"D","isRed":true,"ticksRemaining":2},
+        {"id":"E","isRed":false,"ticksRemaining":2},
+        {"id":"F","isRed":true,"ticksRemaining":0},
+        {"id":"G","isRed":false,"ticksRemaining":2},
+        {"id":"H","isRed":true,"ticksRemaining":0},
+        {"id":"I","isRed":true,"ticksRemaining":1}
+      ],
+      "collisions": []
+    }
+  ]
+}

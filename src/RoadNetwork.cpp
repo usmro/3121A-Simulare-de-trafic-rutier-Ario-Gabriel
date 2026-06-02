@@ -2,6 +2,7 @@
 #include "Vehicle.h"
 #include <queue>
 #include <map>
+#include <set>
 #include <climits>
 #include <algorithm>
 
@@ -67,6 +68,7 @@ std::vector<Street*> RoadNetwork::findPath(Intersection* start,
 
     std::map<Intersection*, int> dist;
     std::map<Intersection*, Street*> previous;
+    std::set<Intersection*> visited; // FIX: track finalised nodes
 
     pq.push({0, start});
     dist[start] = 0;
@@ -75,11 +77,18 @@ std::vector<Street*> RoadNetwork::findPath(Intersection* start,
         auto [cost, current] = pq.top();
         pq.pop();
 
+        // FIX: skip stale priority-queue entries. Without this, a node like E
+        // (4 edges) can be popped multiple times with outdated costs and pick
+        // a wrong predecessor, producing broken or missing routes through the centre.
+        if (visited.count(current)) continue;
+        visited.insert(current);
+
         if (current == goal) break;
 
         for (Street* s : current->getStreets()) {
             Intersection* next = s->getOtherEnd(current);
             if (next == nullptr) continue;
+            if (visited.count(next)) continue; // already finalised
 
             int newCost = cost + vehicle->edgeCost(s);
 
@@ -91,13 +100,14 @@ std::vector<Street*> RoadNetwork::findPath(Intersection* start,
         }
     }
 
+    // reconstruct path by walking predecessors back from goal
     std::vector<Street*> path;
     Intersection* current = goal;
-
     while (previous.find(current) != previous.end()) {
         Street* s = previous[current];
         path.push_back(s);
         current = s->getOtherEnd(current);
+        if (current == start) break; // FIX: stop cleanly at start
     }
 
     std::reverse(path.begin(), path.end());

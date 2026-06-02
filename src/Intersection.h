@@ -18,7 +18,7 @@ public:
     // called during map building in RoadNetwork
     void addStreet(Street* s);
 
-    // pathfinding needs this — all streets you can take from here
+    // pathfinding needs this ï¿½ all streets you can take from here
     std::vector<Street*>& getStreets();
 
     // traffic light
